@@ -6,7 +6,7 @@
 [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]&#13;
 [b]/config[/b] : Where the config files will be created.[br]&#13;
 </Description>
-  <Registry>https://registry.hub.docker.com/u/ninthwalker/brentsplexreport/</Registry>
+  <Registry>https://registry.hub.docker.com/u/ninthwalker/plexreport/</Registry>
   <Repository>ninthwalker/plexreport</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
