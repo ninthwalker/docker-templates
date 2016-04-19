@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Name>plexReport</Name>
-  <Description>This is a Dockerfile for \"plexReport\" - (https://github.com/bstascavage/plexReport)[br][br]&#13;
+  <Description>This is a Dockerfile for \"plexReport\" - Creates an email with the latest additions to Plex[br]
+  Forked from original creators page at: https://github.com/bstascavage/plexReport[br][br]&#13;
 [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]&#13;
-[b]/config[/b] : Where the config file will be created.[br]&#13;
+[b]/config[/b] : Where the config files will be created.[br]&#13;
 </Description>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/brentsplexreport/</Registry>
-  <Repository>ninthwalker/brentsplexreport</Repository>
+  <Repository>ninthwalker/plexreport</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
