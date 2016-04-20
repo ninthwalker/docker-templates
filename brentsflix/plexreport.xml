@@ -4,13 +4,34 @@
 <Category>MediaApp:Video MediaServer:Video</Category>
 <Date>2016-04-20</Date>
 <changes>
-  Modified the original smdion docker template and bstascavage files to wrok again.
+  [center][img width='460px' src='https://github.com/ninthwalker/docker-templates/blob/master/brentsflix/images/brentsflixlogo.png'][/center]
+  [center][font size=4]plexReport Changelog[/font][/center]
+  [b]20APR2016:[/b] Re-release of bstascavage's plexReport in docker form.[br]
+  Modified the original smdion docker template and bstascavage files to work again.
 </changes>
   <Name>plexReport</Name>
-  <Description>This is a Dockerfile for \"plexReport\" - It Creates an email with the latest additions to Plex[br]
-  Forked from original creators page at: https://github.com/bstascavage/plexReport[br][br]&#13;
-[b][span style=\'color: #E80000;\']Directions:[/span][/b][br]&#13;
-[b]/config[/b] : Where the config files will be created.[br]&#13;
+  <Description>This is a Docker for \"plexReport\" - It Creates an email with the latest additions to Plex[br]
+  Forked from original creators page at: https://github.com/bstascavage/plexReport[br][br]
+[b][span style=\'color: #E80000;\']Directions:[/span][/b][br]
+[b]/config[/b] : Where the config files will be created.[br][br]
+After install, run the initial_script.sh:[br]
+-----------------------------------------[br]
+[b]docker exec -it plexReport bash[b][br]
+[b]cd /opt/plexReport[b][br]
+[b]./initial_setup.sh[b][br]
+# Follow Prompts[br]
+[b]exit[b][br]
+-----------------------------------------[br]
+You can now edit the email_body.erb and config.yaml with your own settings in your appdata dir[br]
+To test, run this at the shell:[br]
+[b]docker exec plexReport plexreport -n -d -t[b][br]
+==============================================[br]
+# To schedule the report to occur regulary:[br]
+Enter the following command in the unRAID shell. Replace the day/time with what you want:[br][br]
+
+[b]crontab -l | { cat; echo "30 11 * * 5 docker exec plexReport plexreport -n -d"; } | crontab -[b][br]
+# To keep the cronjob after a reboot, also add the line to your \boot\config\go file.[br]
+=====================================================================================[br]
 <Support>http://lime-technology.com/forum/index.php?topic=TBD.0</Support>
 </Description>
 <Project>https://github.com/bstascavage/plexReport</Project>
@@ -37,7 +58,8 @@
   </Data>
   <Version></Version>
   <WebUI></WebUI>
-  <Banner>http://www.macupdate.com/util/iconlg/27302.png</Banner>
-  <Icon>http://www.macupdate.com/util/iconlg/27302.png</Icon>
+  <Overview>plexReport generates an email to send to your users with all the latest Plex content</Overview>
+  <Banner></Banner>
+  <Icon>https://github.com/ninthwalker/docker-templates/blob/master/brentsflix/images/plexreportlogo.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
