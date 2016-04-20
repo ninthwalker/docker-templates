@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
+  <Beta>False</Beta>
+<Category>MediaApp:Video MediaServer:Video</Category>
+<Date>2016-04-20</Date>
+<changes>
+  Modified the original smdion docker template and bstascavage files to wrok again.
+</changes>
   <Name>plexReport</Name>
-  <Description>This is a Dockerfile for \"plexReport\" - Creates an email with the latest additions to Plex[br]
+  <Description>This is a Dockerfile for \"plexReport\" - It Creates an email with the latest additions to Plex[br]
   Forked from original creators page at: https://github.com/bstascavage/plexReport[br][br]&#13;
 [b][span style=\'color: #E80000;\']Directions:[/span][/b][br]&#13;
 [b]/config[/b] : Where the config files will be created.[br]&#13;
+<Support>http://lime-technology.com/forum/index.php?topic=TBD.0</Support>
 </Description>
+<Project>https://github.com/bstascavage/plexReport</Project>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/plexreport/</Registry>
   <Repository>ninthwalker/plexreport</Repository>
   <BindTime>true</BindTime>
@@ -29,7 +37,7 @@
   </Data>
   <Version></Version>
   <WebUI></WebUI>
-  <Banner></Banner>
+  <Banner>http://www.macupdate.com/util/iconlg/27302.png</Banner>
   <Icon>http://www.macupdate.com/util/iconlg/27302.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
