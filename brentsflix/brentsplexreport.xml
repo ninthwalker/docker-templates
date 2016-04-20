@@ -18,7 +18,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/cache/.Programs/plexreport/</HostDir>
-      <ContainerDir>/etc/plexReport/</ContainerDir>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
