@@ -4,7 +4,7 @@
 <Category>MediaApp:Video MediaServer:Video</Category>
 <Date>2016-04-20</Date>
 <changes>
-  [center][img width='460px' src='https://github.com/ninthwalker/docker-templates/blob/master/brentsflix/images/brentsflixlogo.png'][/center]
+  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/plexreportlogo.png'][/center]
   [center][font size=4]plexReport Changelog[/font][/center]
   [b]20APR2016:[/b] Re-release of bstascavage's plexReport in docker form.[br]
   Modified the original smdion docker template and bstascavage files to work again.
@@ -32,9 +32,9 @@ Enter the following command in the unRAID shell. Replace the day/time with what 
 [b]crontab -l | { cat; echo "30 11 * * 5 docker exec plexReport plexreport -n -d"; } | crontab -[b][br]
 # To keep the cronjob after a reboot, also add the line to your \boot\config\go file.[br]
 =====================================================================================[br]
-<Support>http://lime-technology.com/forum/index.php?topic=TBD.0</Support>
 </Description>
-<Project>https://github.com/bstascavage/plexReport</Project>
+<Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
+<Project>https://github.com/ninthwalker/plexreport</Project>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/plexreport/</Registry>
   <Repository>ninthwalker/plexreport</Repository>
   <BindTime>true</BindTime>
@@ -60,6 +60,6 @@ Enter the following command in the unRAID shell. Replace the day/time with what 
   <WebUI></WebUI>
   <Overview>plexReport generates an email to send to your users with all the latest Plex content</Overview>
   <Banner></Banner>
-  <Icon>https://github.com/ninthwalker/docker-templates/blob/master/brentsflix/images/plexreportlogo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/plexreportlogo.png</Icon>
   <ExtraParams></ExtraParams>
 </Container>
