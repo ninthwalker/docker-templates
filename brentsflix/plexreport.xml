@@ -24,16 +24,17 @@ After install, run the initial_script.sh:[br]
 -----------------------------------------[br]
 You can now edit the email_body.erb and config.yaml with your own settings in your appdata dir[br]
 To test, run this at the shell:[br]
-[b]docker exec plexReport plexreport -n -d -t[b][br]
+[b]docker exec plexReport plexreport -t[b][br]
 ==============================================[br]
 # To schedule the report to occur regulary:[br]
 Enter the following command in the unRAID shell. Replace the day/time with what you want:[br][br]
 
-[b]crontab -l | { cat; echo "30 11 * * 5 docker exec plexReport plexreport -n -d"; } | crontab -[b][br]
-# To keep the cronjob after a reboot, also add the line to your \boot\config\go file.[br]
+[b]crontab -l | { cat; echo "30 11 * * 5 docker exec plexReport plexreport"; } | crontab -[b][br]
+# To keep the cronjob after a reboot, also add the line to your \\boot\\config\\go file.[br]
 =====================================================================================[br]
+Please see https://github.com/ninthwalker/plexReport for full config.yaml settings and command line options.[br]
 </Description>
-<Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
+<Support>Support Page: http://lime-technology.com/forum/index.php?topic=48577.0</Support>
 <Project>https://github.com/ninthwalker/plexreport</Project>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/plexreport/</Registry>
   <Repository>ninthwalker/plexreport</Repository>
