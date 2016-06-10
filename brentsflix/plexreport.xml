@@ -2,11 +2,12 @@
 <Container>
   <Beta>False</Beta>
 <Category>MediaApp:Video MediaServer:Video</Category>
-<Date>2016-04-20</Date>
+<Date>2016-06-09</Date>
 <changes>
   [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/plexreportlogo.png'][/center]
   [center][font size=4]plexReport Changelog[/font][/center]
   [b]20APR2016:[/b] Re-release of bstascavage's plexReport in docker form.[br]
+  [b]09JUN2016:[/b] Fixed bundler error, updated email template to fix pictures, added backup config during initial script run[br]
   Modified the original smdion docker template and bstascavage files to work again.
 </changes>
   <Name>plexReport</Name>
@@ -26,11 +27,13 @@ You can now edit the email_body.erb and config.yaml with your own settings in yo
 To test, run this at the shell:[br]
 [b]docker exec plexReport plexreport -t[b][br]
 ==============================================[br]
-# To schedule the report to occur regulary:[br]
-Enter the following command in the unRAID shell. Replace the day/time with what you want:[br][br]
+# To schedule the report to occur regulary use the new unRAID 6 cron system:[br][br]
 
-[b]crontab -l | { cat; echo "30 11 * * 5 docker exec plexReport plexreport"; } | crontab -[b][br]
-# To keep the cronjob after a reboot, also add the line to your \\boot\\config\\go file.[br]
+Modify the "plexreport_schedule.cron" with the schedule that you would prefer.[br]
+This file is located in your docker appdata /config location.[br][br]
+
+Then copy the "plexreport_schedule.cron" to /boot/config/plugins/dynamix.[br]
+Each time unraid is started it will load your plexreport_schedule.[br]
 =====================================================================================[br]
 Please see https://github.com/ninthwalker/plexReport for full config.yaml settings and command line options.[br]
 </Description>
@@ -47,7 +50,7 @@ Please see https://github.com/ninthwalker/plexReport for full config.yaml settin
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/.Programs/plexreport/</HostDir>
+      <HostDir>/mnt/cache/appdata/plexreport/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
