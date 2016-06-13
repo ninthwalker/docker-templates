@@ -8,6 +8,7 @@
   [center][font size=4]plexReport Changelog[/font][/center]
   [b]20APR2016:[/b] Re-release of bstascavage's plexReport in docker form.[br]
   [b]09JUN2016:[/b] Fixed bundler error, updated email template to fix pictures, added backup config during initial script run[br]
+  [b]13JUN2016:[/b] Changed the way cron is handled. Using new .cron system from unRAID 6.[br]
   Modified the original smdion docker template and bstascavage files to work again.
 </changes>
   <Name>plexReport</Name>
