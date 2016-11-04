@@ -40,8 +40,8 @@ Please see https://github.com/ninthwalker/plexReport for full config.yaml settin
 </Description>
 <Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
 <Project>https://github.com/ninthwalker/plexreport</Project>
-  <Registry>https://registry.hub.docker.com/u/ninthwalker/plexreport/</Registry>
-  <Repository>ninthwalker/plexreport</Repository>
+  <Registry>https://registry.hub.docker.com/u/ninthwalker/testpr/</Registry>
+  <Repository>ninthwalker/testpr</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
