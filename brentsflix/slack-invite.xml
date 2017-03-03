@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+<Date>2017-03-03</Date>
+<changes>
+  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png'][/center]
+  [center][font size=4]plexReport Changelog[/font][/center]
+  [b]03MAR2017:[/b] Initial unRAID Template release[br]
+</changes>
+  <Name>Slack-Invite</Name>
+  <Description>This is a Docker for a public \"Slack Invite\" page.[br]
+  It Creates a web based portal where users can request access to your slack team automatically.[br]
+  Forked from original creators page at: https://github.com/outsideris/slack-invite-automation[br][br]
+[b][span style=\'color: #E80000;\']Variables:[/span][/b][br]
+[b]COMMUNITY_NAME[/b] : Your Slack team name. ie: slackteam [br][br]
+[b]SLACK_URL[/b] : URL of team. ie: slackteam.slack.com[br][br]
+[b]YOUR-ACCESS-TOKEN[/b] : Easiest way is to create a test token from here:[br]
+https://api.slack.com/custom-integrations/legacy-tokens .[br][br]
+-----------------------------------------[br]
+Full info on github site: https://github.com/ninthwalker/slack-invite[br]
+==============================================[br]
+</Description>
+<Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
+<Project>https://github.com/ninthwalker/slack-invite</Project>
+  <Registry>https://registry.hub.docker.com/u/ninthwalker/slack-invite/</Registry>
+  <Repository>ninthwalker/slack-invite</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/plexreport/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>1.4</Version>
+  <WebUI></WebUI>
+  <Overview>plexReport generates an email to send to your users with all the latest Plex content</Overview>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-invite.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
