@@ -7,7 +7,7 @@
   [center][font size=4]plexReport Changelog[/font][/center]
   [b]03MAR2017:[/b] Initial unRAID Template release[br]
 </changes>
-  <Name>Slack-Invite</Name>
+  <Name>slack-invite</Name>
   <Description>This is a Docker for a public \"Slack Invite\" page.[br]
   It Creates a web based portal where users can request access to your slack team automatically.[br]
   Forked from original creators page at: https://github.com/outsideris/slack-invite-automation[br][br]
@@ -16,6 +16,7 @@
 [b]SLACK_URL[/b] : URL of team. ie: myslackteam.slack.com[br][br]
 [b]YOUR-ACCESS-TOKEN[/b] : Easiest way is to create a test token from here:[br]
 https://api.slack.com/custom-integrations/legacy-tokens[br][br][br]
+Access Slack-Invite site at http://unraidIP:7879[br]
 Full info on github site: https://github.com/ninthwalker/slack-invite[br]
 ==============================================[br]
 </Description>
