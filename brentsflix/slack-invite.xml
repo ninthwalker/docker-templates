@@ -15,10 +15,9 @@
 [b]COMMUNITY_NAME[/b] : Your Slack team name. ie: myslackteam [br][br]
 [b]SLACK_URL[/b] : URL of team. ie: myslackteam.slack.com[br][br]
 [b]YOUR-ACCESS-TOKEN[/b] : Easiest way is to create a test token from here:[br]
-https://api.slack.com/custom-integrations/legacy-tokens[br][br][br]
+https://api.slack.com/custom-integrations/legacy-tokens[br][br]
 Access Slack-Invite site at http://unraidIP:7879[br]
 Full info on github site: https://github.com/ninthwalker/slack-invite[br]
-==============================================[br]
 </Description>
 <Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
 <Project>httpss://github.com/ninthwalker/slack-invite</Project>
