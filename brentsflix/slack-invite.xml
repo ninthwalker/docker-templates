@@ -11,37 +11,48 @@
   <Description>This is a Docker for a public \"Slack Invite\" page.[br]
   It Creates a web based portal where users can request access to your slack team automatically.[br]
   Forked from original creators page at: https://github.com/outsideris/slack-invite-automation[br][br]
-[b][span style=\'color: #E80000;\']Variables:[/span][/b][br]
-[b]COMMUNITY_NAME[/b] : Your Slack team name. ie: slackteam [br][br]
-[b]SLACK_URL[/b] : URL of team. ie: slackteam.slack.com[br][br]
+[b][span style=\'color: #E80000;\']Change the variables to your own:[/span][/b][br]
+[b]COMMUNITY_NAME[/b] : Your Slack team name. ie: myslackteam [br][br]
+[b]SLACK_URL[/b] : URL of team. ie: myslackteam.slack.com[br][br]
 [b]YOUR-ACCESS-TOKEN[/b] : Easiest way is to create a test token from here:[br]
-https://api.slack.com/custom-integrations/legacy-tokens .[br][br]
------------------------------------------[br]
+https://api.slack.com/custom-integrations/legacy-tokens[br][br][br]
 Full info on github site: https://github.com/ninthwalker/slack-invite[br]
 ==============================================[br]
 </Description>
 <Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
-<Project>https://github.com/ninthwalker/slack-invite</Project>
-  <Registry>https://registry.hub.docker.com/u/ninthwalker/slack-invite/</Registry>
+<Project>httpss://github.com/ninthwalker/slack-invite</Project>
+  <Registry>https://hub.docker.com/r/ninthwalker/slack-invite/</Registry>
   <Repository>ninthwalker/slack-invite</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
+    <Variable>
+      <Name>COMMUNITY_NAME</Name>
+      <Value>myslackteam</Value>
+    </Variable>
+    <Variable>
+      <Name>SLACK_URL</Name>
+      <Value>myslackteam.slack.com</Value>
+    </Variable>
+    <Variable>
+      <Name>SLACK_TOKEN</Name>
+      <Value>Enter YOur slack token here</Value>
+    </Variable>
+  </Environment>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>7879</HostPort>
+        <ContainerPort>7879</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/plexreport/</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Version>1.4</Version>
-  <WebUI></WebUI>
-  <Overview>plexReport generates an email to send to your users with all the latest Plex content</Overview>
+  <Version>1.0</Version>
+  <WebUI>http://[IP]:[PORT:7879]/</WebUI>
   <Banner></Banner>
-  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-invite.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png</Icon>
+  <Overview>Creates a simple webpage for Slack invite signups</Overview>
   <ExtraParams></ExtraParams>
 </Container>
