@@ -19,7 +19,7 @@ https://api.slack.com/custom-integrations/legacy-tokens[br][br]
 Access Slack-Invite site at http://unraidIP:7879[br]
 Full info on github site: https://github.com/ninthwalker/slack-invite[br]
 </Description>
-<Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
+<Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
 <Project>httpss://github.com/ninthwalker/slack-invite</Project>
   <Registry>https://hub.docker.com/r/ninthwalker/slack-invite/</Registry>
   <Repository>ninthwalker/slack-invite</Repository>
