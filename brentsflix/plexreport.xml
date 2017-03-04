@@ -37,7 +37,7 @@ Each time unraid is started it will load your plexreport_schedule.[br]
 =====================================================================================[br]
 Please see https://github.com/ninthwalker/plexReport for full config.yaml settings and command line options.[br]
 </Description>
-<Support>http://lime-technology.com/forum/index.php?topic=48577.0</Support>
+<Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
 <Project>https://github.com/ninthwalker/plexreport</Project>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/plexreport/</Registry>
   <Repository>ninthwalker/plexreport</Repository>
