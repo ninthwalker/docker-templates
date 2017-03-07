@@ -4,7 +4,7 @@
 <Date>2017-03-03</Date>
 <changes>
   [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png'][/center]
-  [center][font size=4]plexReport Changelog[/font][/center]
+  [center][font size=4]slack-invite Changelog[/font][/center]
   [b]03MAR2017:[/b] Initial unRAID Template release[br]
 </changes>
   <Name>slack-invite</Name>
