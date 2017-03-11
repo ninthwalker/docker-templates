@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Beta>True/Beta>
+  <Beta>True</Beta>
 <Category>MediaApp:Video MediaServer:Video</Category>
 <Date>2016-11-04</Date>
 <changes>
