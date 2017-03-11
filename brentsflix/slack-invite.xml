@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Beta>False</Beta>
+  <Category>Network:Messenger Productivity:</Category>
 <Date>2017-03-03</Date>
 <changes>
   [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png'][/center]
