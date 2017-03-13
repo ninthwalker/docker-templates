@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>Network:Messenger Productivity:</Category>
+<Date>2017-03-03</Date>
+<changes>
+  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png'][/center]
+  [center][font size=4]slack-welcome Changelog[/font][/center]
+  [b]03MAR2017:[/b] Initial unRAID Template release[br]
+</changes>
+  <Name>slack-welcome</Name>
+  <Description>This is a Docker for the slack-welcome[br]
+  It automatically sends a message to users when they join your team[br]
+  Forked from original creators page at: https://github.com/ninthwalker/slack-welcome[br][br]
+[b][span style=\'color: #E80000;\']Change the variables to your own:[/span][/b][br]
+[b]WELCOME_MESSAGE[/b] : Custom welcome message[br][br]
+[b]SLACK_TOKEN[/b] : Create one with a custom bot integration here:[br]
+https://my.slack.com/services/new/bot[br][br]
+Full info on github site: https://github.com/ninthwalker/slack-welcome[br]
+</Description>
+<Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
+<Project>httpss://github.com/ninthwalker/slack-welcome</Project>
+  <Registry>https://hub.docker.com/r/ninthwalker/slack-welcome/</Registry>
+  <Repository>ninthwalker/slack-welcome</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>WELCOME_MESSAGE</Name>
+      <Value>Hi, Thanks for joining our team!</Value>
+    </Variable>
+    <Variable>
+      <Name>SLACK_TOKEN</Name>
+      <Value>Enter your slack token here</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Version>1.0</Version>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/slack-square.png</Icon>
+  <Overview>Send a welcome messageto a slack user when they join your team</Overview>
+  <ExtraParams></ExtraParams>
+</Container>
