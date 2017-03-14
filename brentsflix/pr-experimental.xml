@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>True</Beta>
+<Category>MediaApp:Video MediaServer:Video</Category>
+<Date>2016-11-04</Date>
+<changes>
+  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/plexreportlogo.png'][/center]
+  [center][font size=5]DEVELOP VERSION - DO NOT USE THIS[/font][/center]
+</changes>
+  <Name>plexReport Experimental Branch</Name>
+  <Description>THIS IS AN EXPERIMENTAL VERSION - DO NOT USE[br]</Description>
+<Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
+<Project>https://github.com/ninthwalker/plexreport</Project>
+  <Registry>https://registry.hub.docker.com/u/ninthwalker/plexreport/</Registry>
+  <Repository>ninthwalker/plexreport</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>PLEX_USERNAME</Name>
+      <Value>plex_username</Value>
+    </Variable>
+    <Variable>
+      <Name>PLEX_PASSWORD</Name>
+      <Value>plex_password</Value>
+    </Variable>
+    <Variable>
+      <Name>PLEX_TOKEN</Name>
+      <Value>Optional - Instead of user/pass</Value>
+    </Variable>
+     <Variable>
+      <Name>PLEX_SERVER_IP</Name>
+      <Value>192.168.1.50</Value>
+    </Variable>
+    <Variable>
+      <Name>SMTP_SERVER</Name>
+      <Value>smtp.gmail.com</Value>
+    </Variable>
+    <Variable>
+      <Name>SMTP_PORT</Name>
+      <Value>587</Value>
+    </Variable>
+    <Variable>
+      <Name>EMAIL_USERNAME</Name>
+      <Value>joe_plex@gmail.com</Value>
+    </Variable>
+     <Variable>
+      <Name>EMAIL_PASSWORD</Name>
+      <Value>email_password</Value>
+    </Variable>
+    <Variable>
+      <Name>SENDER_DISPLAY_NAME</Name>
+      <Value>Plex Server</Value>
+    </Variable>
+    <Variable>
+      <Name>EMAIL_SUBJECT</Name>
+      <Value>This Week on Plex</Value>
+    </Variable>
+    <Variable>
+      <Name>EMAIL_BODY_DISPLAY_TITLE</Name>
+      <Value>What's new on Plex</Value>
+    </Variable>
+</Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+         <HostPort></HostPort>
+          <ContainerPort>6878</ContainerPort>
+          <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/plexreport-exp/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Version>1.0</Version>
+  <WebUI>http://[IP]:[PORT:6878]</WebUI>
+  <Overview>plexReport generates an email to send to your users with all the latest Plex content</Overview>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/brentsflix/images/plexreportlogo.png</Icon>
+  <ExtraParams></ExtraParams>
+</Container>
