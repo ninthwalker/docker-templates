@@ -25,6 +25,7 @@ Full info on github site: https://github.com/ninthwalker/slack-welcome[br]
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
+    <Variable>
       <Name>HUBOT_SLACK_TOKEN</Name>
       <Value>Enter your slack token here</Value>
     </Variable>
