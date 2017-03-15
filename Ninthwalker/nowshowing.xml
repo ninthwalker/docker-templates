@@ -106,10 +106,10 @@
     </Variable>
   </Environment>
   <BaseImage>alpine:3.3</BaseImage>
-  <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="plex_username" Mode="" Description="Container Variable: PLEX_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="smtp.gmail.com" Mode="" Description="Container Variable: SMTP_SERVER" Type="Variable" Display="always-hide" Required="false" Mask="false">smtp.gmail.com</Config>
-  <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="email_password" Mode="" Description="Container Variable: EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
+  <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="Container Variable: EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="example@gmail.com" Mode="" Description="Container Variable: EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"/>>
   <Config Name="SMTP PORT" Target="SMTP_PORT" Default="587" Mode="" Description="Container Variable: SMTP_PORT" Type="Variable" Display="always-hide" Required="false" Mask="false">587</Config>
   <Config Name="PLEX SERVER IP" Target="PLEX_SERVER_IP" Default="" Mode="" Description="Container Variable: PLEX_SERVER_IP" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
