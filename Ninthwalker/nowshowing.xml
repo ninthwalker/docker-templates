@@ -28,8 +28,8 @@
   <Branch>
     <Tag>dev</Tag>
     <TagDescription>DEV BRANCH - EXPERIMENTAL</TagDescription>
-</Branch>
-  <DateInstalled>20170315</DateInstalled>
+  </Branch>
+  <DateInstalled>2017-03-15</DateInstalled>
   <Description>Creates an email and website of recently added media to your Plex Server</Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -60,13 +60,8 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>smtp.gmail.com</Value>
-      <Name>SMTP_SERVER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>EMAIL_PASSWORD</Name>
+      <Value/>>
+      <Name>PLEX_SERVER_IP</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -75,13 +70,18 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>587</Value>
-      <Name>SMTP_PORT</Name>
+      <Value/>
+      <Name>EMAIL_PASSWORD</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>>
-      <Name>PLEX_SERVER_IP</Name>
+      <Value>smtp.gmail.com</Value>
+      <Name>SMTP_SERVER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>587</Value>
+      <Name>SMTP_PORT</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -96,12 +96,12 @@
     </Variable>
     <Variable>
       <Value/>
-      <Name>EMAIL_BODY_DISPLAY_TITLE</Name>
+      <Name>EMAIL_SUBJECT</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>EMAIL_SUBJECT</Name>
+      <Name>EMAIL_BODY_DISPLAY_TITLE</Name>
       <Mode/>
     </Variable>
   </Environment>
