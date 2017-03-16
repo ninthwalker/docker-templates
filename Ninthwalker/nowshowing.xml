@@ -106,7 +106,7 @@
       <Mode/>
     </Variable>
   </Environment>
-  <BaseImage>alpine:3.3</BaseImage>
+  <BaseImage>alpine:3.5</BaseImage>
   <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="smtp.gmail.com" Mode="" Description="Container Variable: SMTP_SERVER" Type="Variable" Display="always-hide" Required="false" Mask="false">smtp.gmail.com</Config>
