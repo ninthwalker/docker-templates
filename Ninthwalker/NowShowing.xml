@@ -130,11 +130,11 @@
   <Config Name="SMTP PORT" Target="SMTP_PORT" Default="587" Mode="" Description="Container Variable: SMTP_PORT" Type="Variable" Display="always-hide" Required="true" Mask="false">587</Config>
   <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="example@gmail.com" Mode="" Description="Container Variable: EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="true" Mask="false"/>>
   <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="Container Variable: EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
-  <Config Name="SENDER DISPLAY NAME" Target="SENDER_DISPLAY_NAME" Default="Plex Server" Mode="" Description="Container Variable: SENDER_DISPLAY_NAME" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="EMAIL SUBJECT" Target="EMAIL_SUBJECT" Default="Now Showing on Plex" Mode="" Description="Container Variable: EMAIL_SUBJECT" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="EMAIL BODY DISPLAY TITLE" Target="EMAIL_BODY_DISPLAY_TITLE" Default="Now Showing on Plex" Mode="" Description="Container Variable: EMAIL_BODY_DISPLAY_TITLE" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="SENDER DISPLAY NAME" Target="SENDER_DISPLAY_NAME" Default="Plex Server" Mode="" Description="Container Variable: SENDER_DISPLAY_NAME" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="EMAIL SUBJECT" Target="EMAIL_SUBJECT" Default="Now Showing on Plex" Mode="" Description="Container Variable: EMAIL_SUBJECT" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="EMAIL BODY DISPLAY TITLE" Target="EMAIL_BODY_DISPLAY_TITLE" Default="Now Showing on Plex" Mode="" Description="Container Variable: EMAIL_BODY_DISPLAY_TITLE" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="true" Mask="false">6878</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/NowShowing" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Optional - Change PUID. See instructions" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Optional - Change PGID. See instructions" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: Optional - To change PUID. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: Optional - To change PGID. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
 </Container>
