@@ -19,8 +19,8 @@
   - Customize the image, header and footer[br]
   - Friendlier setup with main settings in template GUI[br]
   - Advanced settings in config file still[br]
-  - Easy scheduling via ???[br]
-  - Docker rebased to Alpine - now only 60Mb![br]
+  - Easy scheduling via cron file[br]
+  - Docker rebased to Alpine - now only 65Mb![br]
   </Changes>
   <WebUI>http://[IP]:[PORT:6878]</WebUI>
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
@@ -48,11 +48,6 @@
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-    <Volume>
-      <HostDir>/etc/localtime</HostDir>
-      <ContainerDir>/etc/localtime</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
   </Data>
   <Environment>
     <Variable>
@@ -65,7 +60,7 @@
       <Name>PLEX_USERNAME</Name>
       <Mode/>
     </Variable>
-	<Variable>
+    <Variable>
       <Value/>
       <Name>PLEX_PASSWORD</Name>
       <Mode/>
@@ -110,13 +105,28 @@
       <Name>EMAIL_BODY_DISPLAY_TITLE</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EMAIL_BODY_DISPLAY_TITLE</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <BaseImage>alpine:3.5</BaseImage>
   <Config Name="PLEX SERVER IP" Target="PLEX_SERVER_IP" Default="" Mode="" Description="Container Variable: PLEX_SERVER_IP" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_USERNAME (Required if PLEX TOKEN is not used)" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD (Required if PLEX TOKEN is not used)" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="PLEX TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Container Variable: PLEX_TOKEN (Optional if PLEX USERNAME/PASSWORD is used)" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-    <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="smtp.gmail.com" Mode="" Description="Container Variable: SMTP_SERVER" Type="Variable" Display="always-hide" Required="true" Mask="false">smtp.gmail.com</Config>
+  <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="smtp.gmail.com" Mode="" Description="Container Variable: SMTP_SERVER" Type="Variable" Display="always-hide" Required="true" Mask="false">smtp.gmail.com</Config>
   <Config Name="SMTP PORT" Target="SMTP_PORT" Default="587" Mode="" Description="Container Variable: SMTP_PORT" Type="Variable" Display="always-hide" Required="true" Mask="false">587</Config>
   <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="example@gmail.com" Mode="" Description="Container Variable: EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="true" Mask="false"/>>
   <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="Container Variable: EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
@@ -125,4 +135,6 @@
   <Config Name="EMAIL BODY DISPLAY TITLE" Target="EMAIL_BODY_DISPLAY_TITLE" Default="Now Showing on Plex" Mode="" Description="Container Variable: EMAIL_BODY_DISPLAY_TITLE" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="true" Mask="false">6878</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/NowShowing" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
-  </Container>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Optional - Change PUID. See instructions" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Optional - Change PGID. See instructions" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+</Container>
