@@ -56,6 +56,11 @@
   </Data>
   <Environment>
     <Variable>
+      <Value/>>
+      <Name>PLEX_SERVER_IP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value/>
       <Name>PLEX_USERNAME</Name>
       <Mode/>
@@ -63,11 +68,6 @@
 	<Variable>
       <Value/>
       <Name>PLEX_PASSWORD</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>>
-      <Name>PLEX_SERVER_IP</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -112,13 +112,13 @@
     </Variable>
   </Environment>
   <BaseImage>alpine:3.5</BaseImage>
+  <Config Name="PLEX SERVER IP" Target="PLEX_SERVER_IP" Default="" Mode="" Description="Container Variable: PLEX_SERVER_IP" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="smtp.gmail.com" Mode="" Description="Container Variable: SMTP_SERVER" Type="Variable" Display="always-hide" Required="true" Mask="false">smtp.gmail.com</Config>
   <Config Name="SMTP PORT" Target="SMTP_PORT" Default="587" Mode="" Description="Container Variable: SMTP_PORT" Type="Variable" Display="always-hide" Required="true" Mask="false">587</Config>
   <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="example@gmail.com" Mode="" Description="Container Variable: EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="true" Mask="false"/>>
   <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="Container Variable: EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
-  <Config Name="PLEX SERVER IP" Target="PLEX_SERVER_IP" Default="" Mode="" Description="Container Variable: PLEX_SERVER_IP" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="false" Mask="false">6878</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/NowShowing" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="PLEX TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Container Variable: PLEX_TOKEN" Type="Variable" Display="advanced" Required="false" Mask="false"/>
