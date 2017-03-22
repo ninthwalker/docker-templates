@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+<Category>HomeAutomation: Tools:</Category>
+<Date>2017-03-22</Date>
+<changes>
+  [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/images/dashbtn.png'][/center]
+  [center][font size=4]DashBtn Changelog[/font][/center]
+  [b]22MAR2017:[/b] Initial unRAID Template release[br]
+</changes>
+  <Name>DashBtn</Name>
+  <Description>This is a Docker for use with Amazon Dash Button's[br]
+  It intercepts the button press and allows you to do various home automation tasks.[br]
+  ie: Turn on a light, start a movie for your kid, notifications, order a pizza, etc.[br][br]
+[b][span style=\'color: #E80000;\']Instructions:[/span][/b][br]
+1) Setup your dash button via the Amazon app, but stop before selecting an item to purchase[br]
+2) Determine your Amazon Dash buttons mac address.
+  a) docker exec -it dashbtn sh[br]
+  b) /config/dashbtn.py discover
+  c) press dash button and wait 10seconds. Then type 'ctrl+c' to stop script.
+  d) look at the dashbtn.log file in the appdata folder to help determine your mac address
+3) In the appdata directory edit the dashbtn.py file with your mac addresses and give them a friendly name.[br]
+  a) Also change the name of the script that will execute when that button is pressed[br]
+4) Create whatever shell, python or curl scripts you want and name them the same as in step 3a[br]
+5) Restart the docker to have all changes/scripts take effect. Have fun automating![br][br]
+Full info on github site: https://github.com/ninthwalker/dashbtn[br]
+</Description>
+<Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
+<Project>httpss://github.com/ninthwalker/dashbtn</Project>
+  <Registry>https://hub.docker.com/r/ninthwalker/dashbtn/</Registry>
+  <Repository>ninthwalker/dashbtn</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Version>1.0</Version>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/ninthwalker/images/dashbtn.png</Icon>
+  <Overview>Amazon Dash Button Interceptor</Overview>
+  <ExtraParams></ExtraParams>
+</Container>
