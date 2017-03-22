@@ -36,7 +36,7 @@ Full info on github site: https://github.com/ninthwalker/dashbtn[br]
   </Networking>
   <Version>1.0</Version>
   <Banner></Banner>
-  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/ninthwalker/images/dashbtn.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/images/dashbtn.png</Icon>
   <Overview>Amazon Dash Button Interceptor</Overview>
   <ExtraParams></ExtraParams>
 </Container>
