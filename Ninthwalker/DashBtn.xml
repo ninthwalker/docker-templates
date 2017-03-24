@@ -2,7 +2,7 @@
 <Container>
   <Beta>False</Beta>
 <Category>HomeAutomation: Tools:</Category>
-<Date>2017-03-22</Date>
+<Date>2017-03-23</Date>
 <changes>
   [center][img width='460px' src='https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/images/dashbtn.png'][/center]
   [center][font size=4]DashBtn Changelog[/font][/center]
@@ -26,7 +26,7 @@
 Full info on github site: https://github.com/ninthwalker/dashbtn[br]
 </Description>
 <Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
-<Project>httpss://github.com/ninthwalker/dashbtn</Project>
+<Project>https://github.com/ninthwalker/dashbtn</Project>
   <Registry>https://hub.docker.com/r/ninthwalker/dashbtn/</Registry>
   <Repository>ninthwalker/dashbtn</Repository>
   <BindTime>true</BindTime>
@@ -42,6 +42,7 @@ Full info on github site: https://github.com/ninthwalker/dashbtn[br]
     </Volume>
 </Data>
   <Version>1.0</Version>
+  <base>alpine:3.5</base>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/master/Ninthwalker/images/dashbtn.png</Icon>
   <Overview>Amazon Dash Button Interceptor</Overview>
