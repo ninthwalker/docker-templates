@@ -1,37 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Container version="2">
   <Name>NowShowing</Name>
   <Beta>True</Beta>
   <Repository>ninthwalker/nowshowing</Repository>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/nowshowing/</Registry>
-  <Project>https://github.com/ninthwalker/nowshowing</Project>
   <Network>bridge</Network>
-  <BindTime>true</BindTime>
   <Privileged>false</Privileged>
+  <BindTime>true</BindTime>
   <Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
-  <Overview>Creates an email and website of recently added media to your Plex Server</Overview>
+  <Overview>Sends an email and creates a website of recently added media to your Plex Server</Overview>
   <Category>MediaApp:Video MediaServer:Video</Category>
   <Changes>
-  15MAR2017: Initial Release (was plexReport)[br]
+  29MAR2017: Initial Release (was known as plexReport)[br]
   Features:[br]
   - Weekly email summary of recently added media[br]
   - Website that hosts the email summary[br]
   - Customize the image, header and footer[br]
   - Friendlier setup with main settings in template GUI[br]
   - Advanced settings in config file still[br]
-  - Easy scheduling via cron file[br]
+  - Easy scheduling via internal cron file[br]
   - Docker rebased to Alpine - now only 65Mb![br]
   </Changes>
-  <WebUI>http://[IP]:[PORT:6878]</WebUI>
+  <WebUI>http://[IP]:[PORT:6878]/</WebUI>
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ninthwalker/NowShowing/dev/images/nowshowing-icon.png</Icon>
   <ExtraParams/>
   <Branch>
     <Tag>dev</Tag>
-    <TagDescription>DEV BRANCH - EXPERIMENTAL</TagDescription>
+    <TagDescription>DEV BRANCH - USE AT OWN RISK</TagDescription>
   </Branch>
-  <DateInstalled>2017-03-19</DateInstalled>
-  <Description>Creates an email and website of recently added media to your Plex Server</Description>
+  <Branch>
+    <Tag>edge</Tag>
+    <TagDescription>EDGE BRANCH - EXPERIMENTAL</TagDescription>
+  </Branch>
+  <DateInstalled>2017-03-25</DateInstalled>
+  <Description>Sends an email and creates a website of recently added media to your Plex Server</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -44,14 +47,14 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/NowShowing</HostDir>
+      <HostDir>/mnt/user/cache/appdata/NowShowing</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value/>>
+      <Value/>
       <Name>PLEX_SERVER_IP</Name>
       <Mode/>
     </Variable>
@@ -67,11 +70,16 @@
     </Variable>
     <Variable>
       <Value/>
-      <Name>PLEX_TOKEN</Name>
+      <Name>SMTP_SERVER</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>example@gmail.com</Value>
+      <Value/>
+      <Name>SMTP_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
       <Name>EMAIL_USERNAME</Name>
       <Mode/>
     </Variable>
@@ -80,61 +88,33 @@
       <Name>EMAIL_PASSWORD</Name>
       <Mode/>
     </Variable>
-    <Variable>
-      <Value>smtp.gmail.com</Value>
-      <Name>SMTP_SERVER</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>587</Value>
-      <Name>SMTP_PORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
+	<Variable>
       <Value/>
-      <Name>SENDER_DISPLAY_NAME</Name>
+      <Name>PLEX_TOKEN</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
-      <Name>EMAIL_SUBJECT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>EMAIL_BODY_DISPLAY_TITLE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
+      <Value>99</Value>
       <Name>PUID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>100</Value>
       <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>EMAIL_BODY_DISPLAY_TITLE</Name>
       <Mode/>
     </Variable>
   </Environment>
   <BaseImage>alpine:3.5</BaseImage>
-  <Config Name="PLEX SERVER IP" Target="PLEX_SERVER_IP" Default="" Mode="" Description="Container Variable: PLEX_SERVER_IP" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="Container Variable: PLEX_USERNAME (Required if PLEX TOKEN is not used)" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="Container Variable: PLEX_PASSWORD (Required if PLEX TOKEN is not used)" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
-  <Config Name="PLEX TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="Container Variable: PLEX_TOKEN (Optional if PLEX USERNAME/PASSWORD is used)" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="smtp.gmail.com" Mode="" Description="Container Variable: SMTP_SERVER" Type="Variable" Display="always-hide" Required="true" Mask="false">smtp.gmail.com</Config>
-  <Config Name="SMTP PORT" Target="SMTP_PORT" Default="587" Mode="" Description="Container Variable: SMTP_PORT" Type="Variable" Display="always-hide" Required="true" Mask="false">587</Config>
-  <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="example@gmail.com" Mode="" Description="Container Variable: EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="true" Mask="false"/>>
-  <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="Container Variable: EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
-  <Config Name="SENDER DISPLAY NAME" Target="SENDER_DISPLAY_NAME" Default="Plex Server" Mode="" Description="Container Variable: SENDER_DISPLAY_NAME" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
-  <Config Name="EMAIL SUBJECT" Target="EMAIL_SUBJECT" Default="Now Showing on Plex" Mode="" Description="Container Variable: EMAIL_SUBJECT" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
-  <Config Name="EMAIL BODY DISPLAY TITLE" Target="EMAIL_BODY_DISPLAY_TITLE" Default="Now Showing on Plex" Mode="" Description="Container Variable: EMAIL_BODY_DISPLAY_TITLE" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="PLEX SERVER IP" Target="PLEX_SERVER_IP" Default="" Mode="" Description="PLEX_SERVER_IP" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="PLEX_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="PLEX_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
+  <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="" Mode="" Description="SMTP_SERVER" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="SMTP PORT" Target="SMTP_PORT" Default="" Mode="" Description="SMTP_PORT" Type="Variable" Display="always-hide" Required="true" Mask="false">587</Config>
+  <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="" Mode="" Description="EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="true" Mask="false">6878</Config>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/NowShowing" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
-  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: Optional - To change PUID. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
-  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: Optional - To change PGID. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/cache/appdata/NowShowing" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/cache/appdata/NowShowing</Config>
+  <Config Name="PLEX TOKEN" Target="PLEX_TOKEN" Default="" Mode="" Description="PLEX_TOKEN (Optional - use if you don't want to enter Plex username/password)" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Optional PUID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Optional PGID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
