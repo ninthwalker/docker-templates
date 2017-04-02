@@ -21,7 +21,7 @@
   - Easy scheduling via internal cron file[br]
   - Docker rebased to Alpine - now only 65Mb![br]
   </Changes>
-  <WebUI>http://[IP]:[PORT:6878]/</WebUI>
+  <WebUI>http://[IP]:[PORT:6878]</WebUI>
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ninthwalker/NowShowing/dev/images/nowshowing-icon.png</Icon>
   <ExtraParams/>
