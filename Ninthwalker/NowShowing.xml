@@ -19,7 +19,7 @@
   - Friendlier setup with main settings in template GUI[br]
   - Advanced settings in config file still[br]
   - Easy scheduling via internal cron file[br]
-  - Docker rebased to Alpine - now only 65Mb![br]
+  - Docker rebased to Alpine - now only 70Mb![br]
   </Changes>
   <WebUI>http://[IP]:[PORT:6878]</WebUI>
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
