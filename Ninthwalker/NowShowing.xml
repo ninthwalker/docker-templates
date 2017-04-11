@@ -1,16 +1,19 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>nowshowing</Name>>
+  <Name>nowshowing</Name>
+  <Beta>False</Beta>
   <Repository>ninthwalker/nowshowing</Repository>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/nowshowing/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <BindTime>true</BindTime>
-  <Support>https://forums.lime-technology.com/topic/55444-support-ninthwalker-docker-repository-plexreport-slack-invite/</Support>
+  <Support>https://forums.lime-technology.com/topic/56483-support-ninthwalker-nowshowing/</Support>
   <Overview>Sends an email and creates a website of recently added media to your Plex Server</Overview>
   <Category>MediaApp:Video MediaServer:Video</Category>
+  <Date>2017-04-10</Date>
+  <Project>https://github.com/ninthwalker/NowShowing</Project>
   <Changes>
-  10APR2017: Initial Release (was known as plexReport)[br]
+  10APR2017: Initial Release[br]
   Features:[br]
   - Weekly email summary of recently added media[br]
   - Website that hosts the email summary[br]
@@ -30,7 +33,9 @@
     <TagDescription>DEV BRANCH - USE AT OWN RISK</TagDescription>
   </Branch>
   <DateInstalled>2017-04-10</DateInstalled>
-  <Description>Sends an email and creates a website of recently added media to your Plex Server</Description>
+  <Description>Sends an email and creates a website of recently added media to your Plex Server[br]
+  See Support page or Project site for full instructions.	
+  </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
