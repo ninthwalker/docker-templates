@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>nowshowing</Name>
-  <Beta>True</Beta>
+  <Name>nowshowing</Name>>
   <Repository>ninthwalker/nowshowing</Repository>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/nowshowing/</Registry>
   <Network>bridge</Network>
@@ -11,15 +10,16 @@
   <Overview>Sends an email and creates a website of recently added media to your Plex Server</Overview>
   <Category>MediaApp:Video MediaServer:Video</Category>
   <Changes>
-  29MAR2017: Initial Release (was known as plexReport)[br]
+  10APR2017: Initial Release (was known as plexReport)[br]
   Features:[br]
   - Weekly email summary of recently added media[br]
   - Website that hosts the email summary[br]
   - Customize the image, header and footer[br]
+  - More customizable features avalable now[br]
   - Friendlier setup with main settings in template GUI[br]
-  - Advanced settings in config file still[br]
-  - Easy scheduling via internal cron file[br]
-  - Docker rebased to Alpine - now only 70Mb![br]
+  - Advanced settings in config file[br]
+  - Easy scheduling via cron[br]
+  - Docker rebased to Alpine - less than 70Mb![br]
   </Changes>
   <WebUI>http://[IP]:[PORT:6878]</WebUI>
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
@@ -29,11 +29,7 @@
     <Tag>dev</Tag>
     <TagDescription>DEV BRANCH - USE AT OWN RISK</TagDescription>
   </Branch>
-  <Branch>
-    <Tag>edge</Tag>
-    <TagDescription>EDGE BRANCH - EXPERIMENTAL</TagDescription>
-  </Branch>
-  <DateInstalled>2017-03-25</DateInstalled>
+  <DateInstalled>2017-04-10</DateInstalled>
   <Description>Sends an email and creates a website of recently added media to your Plex Server</Description>
   <Networking>
     <Mode>bridge</Mode>
