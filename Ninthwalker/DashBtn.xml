@@ -15,7 +15,7 @@
 [b][span style=\'color: #E80000;\']Instructions:[/span][/b][br]
 [b]1)[/b] Setup your dash button via the Amazon app, but stop before selecting an item to purchase[br]
 [b]2)[/b] Determine your Amazon Dash buttons mac address.[br]
- a) docker exec -it dashbtn sh[br]
+ a) docker exec -it DashBtn sh[br]
  b) /config/dashbtn.py discover[br]
  c) press dash button and wait 10seconds. Then type 'ctrl+c' to stop script.[br]
  d) look at the dashbtn.log file in the appdata folder to help determine your mac address[br]
