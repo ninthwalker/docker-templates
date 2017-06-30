@@ -13,6 +13,8 @@
   <Date>2017-04-10</Date>
   <Project>https://github.com/ninthwalker/NowShowing</Project>
   <Changes>
+  30JUN2017:
+  - API fix for OMDB (Temporary workaround)
   09MAY2017:
   - Documentation updates[br]
   - Minor text fixes[br][br]
@@ -31,10 +33,6 @@
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png</Icon>
   <ExtraParams/>
-  <Branch>
-    <Tag>dev</Tag>
-    <TagDescription>DEV BRANCH - USE AT OWN RISK</TagDescription>
-  </Branch>
   <DateInstalled>2017-04-10</DateInstalled>
   <Description>Sends an email and creates a website of recently added media to your Plex Server[br]
   See Support page or Project site for full instructions.	
@@ -113,7 +111,7 @@
   <Config Name="PLEX USERNAME" Target="PLEX_USERNAME" Default="" Mode="" Description="PLEX_USERNAME" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="PLEX PASSWORD" Target="PLEX_PASSWORD" Default="" Mode="" Description="PLEX_PASSWORD" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="SMTP SERVER" Target="SMTP_SERVER" Default="" Mode="" Description="SMTP_SERVER" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="SMTP PORT" Target="SMTP_PORT" Default="" Mode="" Description="SMTP_PORT" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="SMTP PORT" Target="SMTP_PORT" Default="" Mode="" Description="SMTP_PORT (Use 587 for Gmail)" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="EMAIL USERNAME" Target="EMAIL_USERNAME" Default="" Mode="" Description="EMAIL_USERNAME" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="EMAIL PASSWORD" Target="EMAIL_PASSWORD" Default="" Mode="" Description="EMAIL_PASSWORD" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
   <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="true" Mask="false">6878</Config>
