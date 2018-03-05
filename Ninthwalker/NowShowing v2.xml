@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>NowShowing v2</Name>
   <Beta>True</Beta>
-  <Repository>ninthwalker/nowshowing</Repository>
+  <Repository>ninthwalker/nowshowing:v2</Repository>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/nowshowing/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
