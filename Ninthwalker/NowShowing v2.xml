@@ -8,7 +8,10 @@
   <Privileged>false</Privileged>
   <BindTime>true</BindTime>
   <Support>https://forums.lime-technology.com/topic/56483-support-ninthwalker-nowshowing/</Support>
-  <Overview>Sends an email and creates a website of recently added media to your Plex Server</Overview>
+  <Overview>Sends an email and creates a website of recently added media to your Plex Server<br>
+    To enable fail2ban, please add "--cap-add=NET_ADMIN" to the Docker settings 'Extra Parameters:' field.<br>
+    This field can be shown by enabling Advanced View by clicking the 'basic' toggle switch in unRAID.
+  </Overview>
   <Category>MediaApp:Video MediaServer:Video</Category>
   <Date>2018-03-05</Date>
   <Project>https://github.com/ninthwalker/NowShowing</Project>
