@@ -13,16 +13,17 @@
     This field can be shown by enabling Advanced View by clicking the 'basic' toggle switch in unRAID.
   </Overview>
   <Category>MediaApp:Video MediaServer:Video</Category>
-  <Date>2018-03-05</Date>
+  <Date>2018-03-13</Date>
   <Project>https://github.com/ninthwalker/NowShowing</Project>
   <Changes>
-  05MAR2018:
+  13MAR2018:
   - Introducing NowShowing v2[br]
   - This is a complete overhaul with tons of new features:[br]
-  - All new Web interface for configuration[br]
+  - All new Web interface for configuration and management[br]
   - Library Filtering![br]
-  - Emails now send as BCC[br]
-  - Web tools: Test, On-demand reports and one-time announcements[br]
+  - Most email providers now supported![br]
+  - Emails now send as BCC for one email rather than many[br]
+  - Web tools: One-time announcements, On-demand and Test Reports[br]
   Original 1.0 Features:
   - Weekly email summary of recently added media[br]
   - Website that hosts the email summary[br]
