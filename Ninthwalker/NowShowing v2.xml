@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>NowShowing v2</Name>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <Repository>ninthwalker/nowshowing:v2</Repository>
   <Registry>https://registry.hub.docker.com/u/ninthwalker/nowshowing/</Registry>
   <Network>bridge</Network>
@@ -22,19 +22,20 @@
   - This is a complete overhaul with tons of new features:[br]
   - All new Web interface for configuration and management[br]
   - Library Filtering![br]
+  - Tautulli Statistics integration.[br]
   - Most email providers now supported![br]
   - Emails now send as BCC for one email rather than many[br]
-  - Web tools: One-time announcements, On-demand and Test Reports[br]
+  - Web tools: One-time announcements, Log Viewer, On-demand and Test Reports[br]
   Original 1.0 Features:
   - Weekly email summary of recently added media[br]
   - Website that hosts the email summary[br]
-  - Customize the image, header and footer[br]
+  - Customize the image, header, footer & more[br]
   </Changes>
   <WebUI>http://[IP]:[PORT:6878]</WebUI>
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png</Icon>
   <ExtraParams/>
-  <DateInstalled>2018-03-05</DateInstalled>
+  <DateInstalled>2018-04-07</DateInstalled>
   <Description>Sends an email and creates a website of recently added media to your Plex Server[br]
   See Support page or Project site for full instructions.	
   </Description>
@@ -69,7 +70,7 @@
   </Environment>
   <BaseImage>alpine:3.5</BaseImage>
   <Config Name="Host Port" Target="6878" Default="6878" Mode="tcp" Description="Container Port: 6878" Type="Port" Display="always-hide" Required="true" Mask="false">6878</Config>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/cache/appdata/NowShowing" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/cache/appdata/NowShowing</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/cache/appdata/NowShowingv2" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/cache/appdata/NowShowing</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Optional PUID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Optional PGID - Usually do not change this. See instructions" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
