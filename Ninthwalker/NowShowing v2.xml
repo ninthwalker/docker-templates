@@ -29,7 +29,7 @@
   Original 1.0 Features:
   - Weekly email summary of recently added media[br]
   - Website that hosts the email summary[br]
-  - Customize the image, header, footer & more[br]
+  - Customize the image, header, footer and more[br]
   </Changes>
   <WebUI>http://[IP]:[PORT:6878]</WebUI>
   <TemplateURL>https://github.com/ninthwalker/docker-templates</TemplateURL>
