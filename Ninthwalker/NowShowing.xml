@@ -13,6 +13,9 @@
   <Date>2017-04-10</Date>
   <Project>https://github.com/ninthwalker/NowShowing</Project>
   <Changes>
+  02APR2018:
+  - v2 Released! Please install the v2 as a fresh docker image.[br]
+  - This v1 is no longer supported.
   30JUN2017:
   - API fix for OMDB (Temporary workaround)
   09MAY2017:
@@ -34,7 +37,8 @@
   <Icon>https://raw.githubusercontent.com/ninthwalker/NowShowing/master/images/nowshowing-icon.png</Icon>
   <ExtraParams/>
   <DateInstalled>2017-04-10</DateInstalled>
-  <Description>Sends an email and creates a website of recently added media to your Plex Server[br]
+  <Description>This version is no longer supported. Please install NowShowing v2. Thanks![br]
+  Sends an email and creates a website of recently added media to your Plex Server[br]
   See Support page or Project site for full instructions.	
   </Description>
   <Networking>
