@@ -8,7 +8,8 @@
   <Privileged>false</Privileged>
   <BindTime>true</BindTime>
   <Support>https://forums.lime-technology.com/topic/56483-support-ninthwalker-nowshowing/</Support>
-  <Overview>Sends an email and creates a website of recently added media to your Plex Server</Overview>
+  <Overview>Please use the new NowShowing v2 app (also found here in Community Apps).[br]
+   This version is no longer being updated or supported. Thanks!</Overview>
   <Category>MediaApp:Video MediaServer:Video</Category>
   <Date>2017-04-10</Date>
   <Project>https://github.com/ninthwalker/NowShowing</Project>
