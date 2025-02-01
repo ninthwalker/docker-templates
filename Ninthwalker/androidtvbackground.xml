@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>android-tv-background</Name>
+  <Repository>ghcr.io/ninthwalker/androidtvbackground</Repository>
+  <Registry>https://github.com/ninthwalker/androidtvbackground/pkgs/container/androidtvbackground</Registry>
+  <ExtraSearchTerms>wallpaper android background</ExtraSearchTerms>
+  <Network>bridge</Network>
+  <Shell/>
+  <Privileged>false</Privileged>
+  <BindTime>false</BindTime>
+  <Support>https://github.com/ninthwalker/androidtvbackground/issues</Support>
+  <Overview>Docker for adelatour11's androidtvbackground.&#xD;
+Create background wallpapers from Plex/TMDB/Trakt.&#xD;
+Useful to use with alternative android tv launchers such as Projectivy[br]
+See full instructions: https://github.com/ninthwalker/androidtvbackground#docker-install-instructions[br]
+  </Overview>
+  <ReadMe>https://github.com/ninthwalker/androidtvbackground/blob/docker/README.md</ReadMe>
+  <Requires>Toggle 'Basic View' to Advanced to see the **Extra Parameters** section. Set *--user uid:gid* to the uid:gid you use on volumes you are mapping for this docker.</Requires>
+  <Category>MediaApp:Video MediaServer:Video</Category>
+  <Date>2025-01-31</Date>
+  <Project>https://github.com/adelatour11/androidtvbackground</Project>
+  <Changes>31JAN2025[br]
+  - Rebase image to Alpine[br]
+  - Update to use docker --user uid:gid[br]
+  30JAN2025:[br]
+  - Initial Docker Release
+  </Changes>
+  <WebUI/>
+  <TemplateURL>https://github.com/ninthwalker/docker-templates/blob/master/Ninthwalker/androidtvbackground.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/docker-templates/refs/heads/master/Ninthwalker/images/androidtvbackground.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <DateInstalled>2025-01-31</DateInstalled>
+  <Screenshot>https://raw.githubusercontent.com/ninthwalker/github/refs/heads/main/img/androidtvbackground/androidtvbackground_example1.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/ninthwalker/github/refs/heads/main/img/androidtvbackground/androidtvbackground_example2.png</Screenshot>
+  <BaseImage>alpine:3.21</BaseImage>
+  <Config Name="PLEX Backgrounds" Target="PLEX" Default="False" Mode="" Description="Set to True to enable PLEX backgrounds" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="TMDB Backgrounds" Target="TMDB" Default="False" Mode="" Description="Set to True to enable TMDB backgrounds" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="TRAKT Backgrounds" Target="TRAKT" Default="False" Mode="" Description="Set to True to enable TRAKT backgrounds" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="CRON Schedule" Target="CRON" Default="False" Mode="" Description="Set to a cron expression to create backgrounds automatically" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="Post Python Script" Target="POST_SCRIPT_PY" Default="False" Mode="" Description="Set to True to run a custom python script" Type="Variable" Display="advanced" Required="false" Mask="false">False</Config>
+  <Config Name="Post Shell Script" Target="POST_SCRIPT_SH" Default="False" Mode="" Description="Set to True to run a custom shell script" Type="Variable" Display="advanced" Required="false" Mask="false">False</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/cache/appdata/android-tv-background" Mode="rw" Description="Path for config files" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/android-tv-background</Config>
+  <Config Name="Backgrounds Path" Target="/backgrounds" Default="/mnt/cache/appdata/android-tv-background" Mode="rw" Description="Path where backgrounds will be saved" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/android-tv-background</Config>
+</Container>

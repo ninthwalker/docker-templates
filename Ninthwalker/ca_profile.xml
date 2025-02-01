@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/ninthwalker/github/main/img/brentsflix/bfx.png</Icon>
+  <Profile>
+    Creating bots, scripts, dockers and other small projects
+  </Profile>
+  <DonateLink>https://github.com/sponsors/ninthwalker</DonateLink>
+  <DonateText>Donations are definitely not required, but much appreciated!</DonateText>
+</Maintainer>
