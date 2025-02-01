@@ -10,7 +10,7 @@
   <BindTime>false</BindTime>
   <Support>https://github.com/ninthwalker/androidtvbackground/issues</Support>
   <Overview>Docker for adelatour11's androidtvbackground.&#xD;
-Create background wallpapers from Plex/TMDB/Trakt.&#xD;
+Create background wallpapers from Plex/Jellyfin/TMDB/Trakt.&#xD;
 Useful to use with alternative android tv launchers such as Projectivy[br]
 See full instructions: https://github.com/ninthwalker/androidtvbackground#docker-install-instructions[br]
   </Overview>
@@ -37,6 +37,7 @@ See full instructions: https://github.com/ninthwalker/androidtvbackground#docker
   <Screenshot>https://raw.githubusercontent.com/ninthwalker/github/refs/heads/main/img/androidtvbackground/androidtvbackground_example2.png</Screenshot>
   <BaseImage>alpine:3.21</BaseImage>
   <Config Name="PLEX Backgrounds" Target="PLEX" Default="False" Mode="" Description="Set to True to enable PLEX backgrounds" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
+  <Config Name="JELLYFIN Backgrounds" Target="JELLYFIN" Default="False" Mode="" Description="Set to True to enable JELLYFIN backgrounds" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="TMDB Backgrounds" Target="TMDB" Default="False" Mode="" Description="Set to True to enable TMDB backgrounds" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="TRAKT Backgrounds" Target="TRAKT" Default="False" Mode="" Description="Set to True to enable TRAKT backgrounds" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
   <Config Name="CRON Schedule" Target="CRON" Default="False" Mode="" Description="Set to a cron expression to create backgrounds automatically" Type="Variable" Display="always" Required="false" Mask="false">False</Config>
